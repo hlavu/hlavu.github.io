@@ -1,0 +1,209 @@
+<!--
+  Name: HOANG LAN ANH VU
+  Student ID: 137393195
+  Email: hlavu@myseneca.ca
+  Section: NEE
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body class="body1">
+    <!--Header and logo-->
+    <div class="remain">
+      <div class="header">
+        <img src="images/logo.png" alt="logo" />
+        <h2>
+          <i class="far fa-grin-hearts"></i> Welcome to Vivian's cake
+          <i class="far fa-grin-hearts"></i>
+        </h2>
+        <button type="submit"><i class="fa fa-search"></i></button>
+        <input type="text" placeholder="Search.." name="search" />
+      </div>
+
+      <!--Navigation bar-->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li id="type1"><a href="index.html">Chocolate Cake</a></li>
+          <li id="type2"><a href="index.html">Green Tea Cake</a></li>
+          <li id="type3"><a href="index.html">Fruit Cake</a></li>
+          <li id="contact"><a href="contact.html">Contact us</a></li>
+          <li id="cart">
+            <a href="#"
+              ><i class="fa fa-cart-plus" style="font-size:18px; color: #e57373;"></i> 0 item</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--Contain form-->
+    <div id="form">
+      <h2>Contact Us</h2>
+      <p>Please fill in this form to contact us, we will get back to you within 12 hours !!</p>
+      <form
+        method="post"
+        name="m_form"
+        action="https://httpbin.org/post"
+        onsubmit="return formValidation();"
+      >
+        <p>
+          Name (No spaces) <br /><input
+            name="Name"
+            size="30"
+            id="name"
+            autofocus="autofocus"
+            required="required"
+          />
+          <br />
+
+          Email <br /><input id="email1" size="30" type="email" name="email" required="required" />
+          <br />
+
+          Address <br /><input name="address" size="30" id="address" required="required" /> <br />
+
+          City <br /><input name="cities" list="cities" required="required" /> <br />
+
+          <datalist id="cities">
+            <option value="Toronto"> </option>
+            <option value="Vancouver"> </option>
+            <option value="Montreal"> </option>
+            <option value="Niagara Falls"> </option>
+            <option value="Edmonton"> </option>
+            <option value="Kitchener"> </option>
+          </datalist>
+
+          <!--Canada's postal code does not include letter D, F, I, O, Q, U or start with W or Z -->
+          Postal Code <br /><input
+            type="text"
+            name="postalcode"
+            id="postalcode"
+            required="required"
+            placeholder="A1A 2A3"
+            pattern="^[AaBbCcEeGgHhJjKkLlMmNnPpRrSsTtVvXxYy][0-9][AaBbCcEeGgHhJjKkLlMmNnPpRrSsTtVvXxYy] ?[0-9][AaBbCcEeGgHhJjKkLlMmNnPpRrSsTtVvXxYy][0-9]$"
+          />
+          <br />
+        </p>
+
+        <p>Purpose of your message</p>
+        <input
+          type="radio"
+          class="check"
+          id="checkNo1"
+          name="purpose"
+          required="required"
+          value="Question"
+          style="margin-left: 5em;"
+        />
+        <label for="checkNo1">Question</label> <br />
+        <input
+          type="radio"
+          class="check"
+          id="checkNo2"
+          name="purpose"
+          value="Comment"
+          style="margin-left: 5em;"
+        />
+        <label for="checkNo2">Comment</label><br />
+        <input
+          type="radio"
+          class="check"
+          id="checkYes"
+          name="purpose"
+          value="Order problem"
+          style="margin-left: 5em;"
+        />
+        <label for="checkYes">Order Problem</label><br />
+        <div id="addBox">
+          <label style="margin-left: 100px;">Order Number</label> <br />
+          <input
+            type="text"
+            maxlength="8"
+            name="orderNumber"
+            placeholder="Enter 8 digits"
+            style="margin-left: 105px;"
+            pattern="^[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$"
+          />
+        </div>
+        <br />
+
+        <label for="msg" style="margin-left: 95px; font-size: 20px;">Message</label> <br />
+        <textarea id="msg" name="message" required="required"></textarea>
+        <input
+          type="hidden"
+          name="myname"
+          id="myname"
+          value="Hoang Lan Anh Vu"
+          required="required"
+        />
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="submit" value="  Send  " />&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="reset" value=" Cancel " />
+        </p>
+      </form>
+    </div>
+
+    <!--Footer-->
+    <div class="remain">
+      <div class="footer">
+        <div class="footer-content">
+          <div class="footer-section-hour">
+            <h3>Office Hour</h3>
+            <p>
+              <i class="fa fa-angle-double-right"></i>
+              Monday-Friday: 8am-8pm <br />
+              <i class="fa fa-angle-double-right"></i>
+              Saturday-Sunday: 9am-6pm
+            </p>
+
+            <p></p>
+          </div>
+
+          <div id="info">
+            <h2>
+              <i class="fas fa-heart"></i> Thank you for shopping here <i class="fas fa-heart"></i>
+            </h2>
+            <p>
+              Follow us:
+              <a href="#"><i class="fab fa-facebook-square" style="font-size:24px"></i></a>
+              <a href="#"><i class="fab fa-instagram" style="font-size:24px; color:brown"></i></a>
+              <a href="#"><i class="fab fa-linkedin" style="font-size:24px"></i></a>
+              <a href="#"><i class="fab fa-tumblr-square" style="font-size:24px"></i></a>
+              <a href="#"><i class="fab fa-youtube" style="font-size:24px;color:red"></i></a>
+            </p>
+          </div>
+          <div class="footer-section-office">
+            <h4>Type in your email here to subscribe us:</h4>
+            <form id="f_form" method="post" action="https://formspree.io/mnqgrbvg">
+              <input id="email" type="email" name="entry1" required="required" />
+              <input
+                id="subscribe"
+                type="submit"
+                name="entry2"
+                value=" Subscribe "
+                style="background-color: red; color: white;"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; Vivian's Cake | Designed by Hoang Lan Anh Vu
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

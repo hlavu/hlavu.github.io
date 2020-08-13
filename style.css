@@ -1,0 +1,377 @@
+/* Add any CSS you need to this file. */
+
+/*
+  Name: HOANG LAN ANH VU
+  Student ID: 137393195
+  Email: hlavu@myseneca.ca
+  Section: NEE
+*/
+
+@font-face {
+  font-family: myFont;
+  src: url(images/CormorantUpright-Regular.ttf);
+}
+
+@font-face {
+  font-family: myFont1;
+  src: url(images/Megrim-Regular.ttf);
+}
+
+@font-face {
+  font-family: myFont2;
+  src: url(images/Norican-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Sofia', myFont, myFont1, myFont2;
+}
+
+/*header*/
+.header {
+  box-sizing: border-box;
+  padding: 15px;
+  width: 100%;
+  background-color: #ffdfdf;
+}
+.header h2 {
+  font-family: myFont1;
+  text-align: center;
+  color: #e57373;
+}
+
+/*logo*/
+.header img {
+  width: 200px;
+  float: left;
+}
+
+/*search*/
+.header input[type='text'] {
+  float: right;
+  border: 1px solid #000;
+  border-right: none;
+  width: 20%;
+  font-size: 17px;
+}
+.header button {
+  float: right;
+  width: 2%;
+  border: none;
+  padding: 5px;
+  background-color: #f5a8a8;
+  font-size: 10.5px;
+  cursor: pointer;
+  border-left: none;
+  border: 0.5px solid #000;
+}
+
+.header button:hover {
+  background-color: #fa9191;
+}
+
+/*navigation bar*/
+nav ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+  font-size: 18px;
+}
+
+nav a:link,
+nav a:visited {
+  display: block;
+  color: #e57373;
+  text-align: center;
+  padding: 5px 25px;
+  text-decoration: none;
+}
+
+nav ul li:hover ul {
+  display: block;
+  padding: 3px;
+  width: 150px;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #543864;
+}
+
+body {
+  background-color: #fef6fb;
+  visibility: visible;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*body of contact.html*/
+.body1 {
+  height: 70em;
+  overflow: auto;
+}
+
+/*items of categories*/
+#display {
+  color: #e8505b;
+  text-align: center;
+}
+
+#display h3 {
+  padding-top: 20px;
+  text-decoration: underline;
+}
+
+#display figure {
+  float: left;
+  padding-left: 25px;
+  height: 175px;
+  margin: 1em 2em 0 0;
+}
+
+#display figure img {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#display figure figcaption {
+  width: 200px;
+  font-size: 1em;
+  padding: 5px;
+  margin-left: -1000em;
+  margin-top: -20px;
+  background-color: #ffa;
+  border: 1px solid #ffad33;
+  border-radius: 5px;
+  position: absolute;
+}
+
+#display figure:hover figcaption {
+  margin-left: 50px;
+}
+
+/*Images popup*/
+#popup {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  cursor: default;
+  z-index: 1000;
+}
+
+#popup .img {
+  max-width: 1000px;
+}
+
+#popup .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  font: bold 24px arial;
+  color: white;
+  background-color: darkred;
+  padding: 2px;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+#popupbg {
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+/*form*/
+#form {
+  visibility: visible;
+  color: #e8505b;
+}
+#form h2 {
+  text-decoration: solid;
+  margin-left: 100px;
+  margin-top: 10px;
+  color: #e8505b;
+}
+#form p {
+  margin-left: 100px;
+  margin-top: 10px;
+  color: #e8505b;
+  font-size: 20px;
+}
+
+#form input {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #e8505b;
+  font-size: 20px;
+  margin-left: 5px;
+}
+#form label {
+  margin-left: 10px;
+  font-size: 18px;
+  margin-bottom: -25px;
+}
+
+#addBox {
+  display: none;
+}
+
+#checkYes:checked ~ #addBox {
+  display: block;
+}
+
+#form textarea {
+  width: 335px;
+  height: 100px;
+  font-size: 20px;
+  float: left;
+  color: #e8505b;
+  margin-left: 100px;
+}
+
+/*aside part*/
+aside {
+  margin-top: 45px;
+  margin-left: 20px;
+  width: 250px;
+  float: left;
+  color: #113f67;
+}
+.background {
+  background-color: #ffcbcb;
+}
+aside h3 {
+  font-family: myFont2;
+  color: #543864;
+  text-decoration: underline #543864;
+}
+
+aside p {
+  margin-left: 10px;
+  font-size: 18px;
+}
+aside h2 {
+  font-family: myFont1;
+  margin-top: 30px;
+}
+
+/*main part*/
+main {
+  margin-top: 85px;
+  margin-left: 50px;
+  width: 868px;
+  float: left;
+}
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 15px;
+}
+
+/* styling images */
+.show_img {
+  margin-top: -50px;
+  height: 420px;
+  object-fit: cover;
+  border: 1px dotted #e57373;
+}
+
+main h2 {
+  margin-left: 250px;
+}
+
+/*footer*/
+.footer {
+  position: fixed;
+  box-sizing: border-box;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  padding: 70px 0px;
+  background-color: #ffd5d5;
+  color: #c81919;
+}
+
+.footer .footer-section-hour h3 {
+  font-family: myFont;
+  margin-left: 30px;
+  font-size: 17px;
+  line-height: 30px;
+  margin-top: -50px;
+}
+
+.footer .footer-section-hour p {
+  font-family: myFont;
+  font-size: 17px;
+  margin-left: 30px;
+  margin-top: -10px;
+}
+
+.footer h2 {
+  text-align: center;
+  font-family: myFont1;
+  margin-top: -70px;
+}
+
+.footer #info p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer p {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.footer .footer-section-office {
+  font-family: myFont;
+  float: right;
+  margin-right: 25px;
+  font-size: 17px;
+  line-height: 30px;
+  margin-top: -80px;
+}
+.footer .footer-section-office form {
+  font-family: myFont;
+  float: right;
+  margin-right: 25px;
+  font-size: 17px;
+  line-height: 30px;
+  margin-top: 7px;
+}
+
+.footer .footer-bottom {
+  background-color: #ffb6b9;
+  border-top: 1px solid #4f3a65;
+  color: #633a82;
+  height: 25px;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  padding-top: 20x;
+  left: 0;
+  bottom: 0;
+}
